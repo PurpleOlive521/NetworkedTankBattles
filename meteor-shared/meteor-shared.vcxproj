@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{748ca9f7-20b0-4f92-a089-00b3d78857c8}</ProjectGuid>
+    <RootNamespace>meteorshared</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\build\</OutDir>
+    <IntDir>..\build\$(ShortProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName).$(Configuration.toLower())</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>include\;..\vendor\raylib\include\;..\meteor-shared\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4100;4189;4505;</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4100;4189;4505;</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\application.h" />
+    <ClInclude Include="include\bullet.h" />
+    <ClInclude Include="include\bulletController.h" />
+    <ClInclude Include="include\bulletManager.h" />
+    <ClInclude Include="include\canvas.h" />
+    <ClInclude Include="include\connection.h" />
+    <ClInclude Include="include\controller.h" />
+    <ClInclude Include="include\core.h" />
+    <ClInclude Include="include\entity.h" />
+    <ClInclude Include="include\entityController.h" />
+    <ClInclude Include="include\eventFactory.h" />
+    <ClInclude Include="include\eventSystem.h" />
+    <ClInclude Include="include\eventSystemTypes.h" />
+    <ClInclude Include="include\game.h" />
+    <ClInclude Include="include\gameObject.h" />
+    <ClInclude Include="include\gameObjectTypes.h" />
+    <ClInclude Include="include\gameTypes.h" />
+    <ClInclude Include="include\inputManager.h" />
+    <ClInclude Include="include\inputTypes.h" />
+    <ClInclude Include="include\level.h" />
+    <ClInclude Include="include\levelFactory.h" />
+    <ClInclude Include="include\level_basic.h" />
+    <ClInclude Include="include\physicsEngine.h" />
+    <ClInclude Include="include\physicsTypes.h" />
+    <ClInclude Include="include\reliableMessageFactory.h" />
+    <ClInclude Include="include\reliableMessageFactoryTypes.h" />
+    <ClInclude Include="include\playerController.h" />
+    <ClInclude Include="include\constants_shared.h" />
+    <ClInclude Include="include\messages.h" />
+    <ClInclude Include="include\network.h" />
+    <ClInclude Include="include\network_layer.h" />
+    <ClInclude Include="include\protocol.h" />
+    <ClInclude Include="include\reliableMessagingSystem.h" />
+    <ClInclude Include="include\replicationManager.h" />
+    <ClInclude Include="include\spawnPoint.h" />
+    <ClInclude Include="include\tank.h" />
+    <ClInclude Include="include\tankController.h" />
+    <ClInclude Include="include\timer.h" />
+    <ClInclude Include="include\timeManager.h" />
+    <ClInclude Include="include\utility.h" />
+    <ClInclude Include="include\wall.h" />
+    <ClInclude Include="include\widget.h" />
+    <ClInclude Include="include\widgetTypes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\application.cpp" />
+    <ClCompile Include="src\bullet.cpp" />
+    <ClCompile Include="src\bulletController.cpp" />
+    <ClCompile Include="src\bulletManager.cpp" />
+    <ClCompile Include="src\canvas.cpp" />
+    <ClCompile Include="src\connection.cpp" />
+    <ClCompile Include="src\controller.cpp" />
+    <ClCompile Include="src\core.cpp" />
+    <ClCompile Include="src\entity.cpp" />
+    <ClCompile Include="src\entityController.cpp" />
+    <ClCompile Include="src\eventFactory.cpp" />
+    <ClCompile Include="src\eventSystem.cpp" />
+    <ClCompile Include="src\eventSystemTypes.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\gameObject.cpp" />
+    <ClCompile Include="src\gameTypes.cpp" />
+    <ClCompile Include="src\inputManager.cpp" />
+    <ClCompile Include="src\inputTypes.cpp" />
+    <ClCompile Include="src\level.cpp" />
+    <ClCompile Include="src\levelFactory.cpp" />
+    <ClCompile Include="src\level_basic.cpp" />
+    <ClCompile Include="src\physicsEngine.cpp" />
+    <ClCompile Include="src\physicsTypes.cpp" />
+    <ClCompile Include="src\reliableMessageFactory.cpp" />
+    <ClCompile Include="src\reliableMessageFactoryTypes.cpp" />
+    <ClCompile Include="src\messages.cpp" />
+    <ClCompile Include="src\network.cpp" />
+    <ClCompile Include="src\network_layer.cpp" />
+    <ClCompile Include="src\playerController.cpp" />
+    <ClCompile Include="src\protocol.cpp" />
+    <ClCompile Include="src\reliableMessagingSystem.cpp" />
+    <ClCompile Include="src\replicationManager.cpp" />
+    <ClCompile Include="src\spawnPoint.cpp" />
+    <ClCompile Include="src\tank.cpp" />
+    <ClCompile Include="src\tankController.cpp" />
+    <ClCompile Include="src\timer.cpp" />
+    <ClCompile Include="src\timeManager.cpp" />
+    <ClCompile Include="src\wall.cpp" />
+    <ClCompile Include="src\widget.cpp" />
+    <ClCompile Include="src\widgetTypes.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

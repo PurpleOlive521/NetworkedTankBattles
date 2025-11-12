@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\application_server.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\clientCollection.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\clientConnection.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playerController_server.cpp" />
+    <ClCompile Include="src\replicationManager_server.cpp" />
+    <ClCompile Include="src\tank_server.cpp" />
+    <ClCompile Include="src\bullet_server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\application_server.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\clientConnection.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\constants_server.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\clientCollection.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\playerController_server.h" />
+    <ClInclude Include="include\replicationManager_server.h" />
+    <ClInclude Include="include\tank_server.h" />
+    <ClInclude Include="include\bullet_server.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{85192d5b-9331-4135-94a5-b82ce0dfbcf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{173fcb0e-07a1-4290-b65e-a76d14d6fbc3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
