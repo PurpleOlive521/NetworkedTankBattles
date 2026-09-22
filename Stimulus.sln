@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "meteor-server", "meteor\meteor.vcxproj", "{49A822E2-A9EF-4C36-8479-BAF939599BAE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "Source\Server\Server.vcxproj", "{49A822E2-A9EF-4C36-8479-BAF939599BAE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{748CA9F7-20B0-4F92-A089-00B3D78857C8} = {748CA9F7-20B0-4F92-A089-00B3D78857C8}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "meteor-client", "meteor-client\meteor-client.vcxproj", "{26903A35-76A6-4C55-A57B-7DCD3B2C2968}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Source\Client\Client.vcxproj", "{26903A35-76A6-4C55-A57B-7DCD3B2C2968}"
 	ProjectSection(ProjectDependencies) = postProject
 		{748CA9F7-20B0-4F92-A089-00B3D78857C8} = {748CA9F7-20B0-4F92-A089-00B3D78857C8}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "meteor-shared", "meteor-shared\meteor-shared.vcxproj", "{748CA9F7-20B0-4F92-A089-00B3D78857C8}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shared", "Source\Shared\Shared.vcxproj", "{748CA9F7-20B0-4F92-A089-00B3D78857C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
